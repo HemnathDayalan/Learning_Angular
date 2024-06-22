@@ -1,0 +1,12 @@
+<div>
+    <h3>Child Component</h3>
+    <p>
+        {{Msgfromparent}}
+    </p>
+</div>
+
+<div>
+    <h4>{{'Explaining @Output Decorator'}}</h4>
+    <input type="text" ngModel="MsgfromChild">
+    <button (click)="eventfunction()">Send Data</button>
+  </div>

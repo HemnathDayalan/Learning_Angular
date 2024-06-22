@@ -1,0 +1,25 @@
+*{
+    padding: 5px;
+}
+
+.Inputdec{
+    background-color: antiquewhite;
+}
+.ImgParent{
+    background-color: cadetblue;
+}
+
+.temprefvar{
+    background-color: azure;
+}
+
+.more-products{
+    display: flex;
+}
+
+.center{
+    text-align: center; /* Center the text content inside the container */
+    display: flex; /* Use flexbox for centering child elements */
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Center child elements vertically */
+}

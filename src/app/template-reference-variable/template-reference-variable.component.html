@@ -1,0 +1,9 @@
+<div class="content">
+    <div>
+        <label for="" >Working on Template Reference Variable</label>
+        <input type="text" #templateRefVar  ngModel="emptystring" placeholder="Template Ref Var" (keyup)="0">
+        <button (click)="onclick(templateRefVar)" >Click here!!</button>
+        <p>{{templateRefVar.value}}</p>
+        <p>{{emptystring}}</p>
+    </div>
+</div>
