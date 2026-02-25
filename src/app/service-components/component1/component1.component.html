@@ -1,6 +1,5 @@
-<div class="container">
-    <label for=""> Enter Value </label>
-    <input type="text" (change)="onInputChange($event)">
-    <p>{{enteredtext}}</p>
-    <button >Submit</button>
+<div>
+    <label for="">Enter some value to be passed to sibling</label>
+    <input type="text" ngmodel="inputValue">
+    <button (click)="onInputChange(inputValue)">Pass</button>
 </div>

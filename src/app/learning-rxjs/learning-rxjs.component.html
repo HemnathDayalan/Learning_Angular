@@ -1,0 +1,19 @@
+<h4>learning-rxjs works!</h4>
+
+<div class="observable">
+    <p>Click here to emit an observable</p>
+    <button class="btn btn-warn" (click)="getAsyncdata()">
+        Emit Observerable
+    </button>
+    <div *ngFor="let x of emptyArrayToSaveObservable">{{x}}</div>
+</div>
+
+<div class="subjects">
+    <p>Clicking the button turn the para into Subject</p>
+    <input class="clickHereToEmitASubject" ngModel="SubjMessage">
+    <button class="btn btn-primary">
+
+        Emit a Subject
+    </button>
+    
+</div>

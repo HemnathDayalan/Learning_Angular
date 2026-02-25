@@ -12,10 +12,14 @@ export const routes: Routes = [
     {
         path: 'templateForms',
         component:TemplateformsComponent
+        
     },
     // {
     //     path:'a&a',
     //     component:AuthenNAuthorComponent
     // }
-
+    {
+        path:'newRouteComponent',
+        loadComponent: () => import('./new-route/new-route.component').then(c => c.NewRouteComponent)
+    }
 ];

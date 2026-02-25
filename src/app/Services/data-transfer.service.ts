@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,11 @@ export class DataTransferService {
 
   constructor() { }
 
-  // dataTransfer = new EventEmitter<string>();
-  dataTransfer = new Subject<string>();
+  private dataSubject  = new BehaviorSubject<string>('');
+  data = this.dataSubject.asObservable();
 
-  raisedatatransfer(data:string){
-    this.dataTransfer.next(data);
+  setData(data: string) {
+    this.dataSubject.next(data);
   }
 
 }

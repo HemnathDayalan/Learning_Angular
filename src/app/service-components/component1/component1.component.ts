@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DataTransferService } from '../../Services/data-transfer.service';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-component1',
@@ -10,20 +11,12 @@ import { DataTransferService } from '../../Services/data-transfer.service';
 })
 export class Component1Component {
 
-  constructor(private data : DataTransferService) {}
+  inputValue: string = '';
 
-  enteredtext: string ="" ;
+  constructor(private dataTransferService: DataTransferService) {}
 
-  onInputChange(event: Event) {
-    const inputElement = (event.target as HTMLInputElement);
-    this.enteredtext = inputElement.value;
-    console.log(this.enteredtext); // Example usage
+  onInputChange(value: string) {
+    this.dataTransferService.setData(value);
   }
-
-  ontrans(){
-    this.data.raisedatatransfer(this.enteredtext)
-  }
-
-  
 
 }

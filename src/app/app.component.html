@@ -2,6 +2,7 @@
   <a routerLink="/lazyloading" routerLinkActive="active"> Trigger Lazy-Loading </a> &nbsp;
   <a routerLink="/templateForms" routerLinkActive="active"> Trigger Template Dirven Forms</a>
   <!-- <a routerLink="/a&a" routerLinkActive="active"> Authentication & Authorization </a> -->
+   <a routerLink="/newRouteComponent" routerLinkActive="active"> Navigatve to new Route</a>
 </div>
 
 <div>
@@ -10,12 +11,12 @@
 
 <div class="Inputdec center">
   <h4>{{'Explaining @Input Decorator'}}</h4>
-  <app-child [Msgfromparent]="parentdata" ></app-child>
+  <app-child [Msgfromparent]="parentdata" (eventtrigger)="par_event($event)" ></app-child>
 </div>
 
 <div class="ImgParent center ">
   <p>Imaginary Parent</p>
-  <app-child (eventtrigger)="par_event($event)" ></app-child>
+  <!-- <app-child (eventtrigger)="par_event($event)" ></app-child> -->
   <span >{{recievedfromchild}}</span>
   <p>// Not working need revision</p>
 </div>
@@ -89,9 +90,15 @@
   <app-api-works></app-api-works>
 </div>
 
-<div>
+<!-- <div>
   <app-ana></app-ana>
+</div> -->
+
+<!-- <div>
+  <app-mat-table></app-mat-table>
+</div> -->
+<button (click)="opendialog()">Trigger Mat-Dialog</button>
+
+<div>
+  <app-learning-rxjs></app-learning-rxjs>
 </div>
-
-
-

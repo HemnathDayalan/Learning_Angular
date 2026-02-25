@@ -17,8 +17,9 @@ export class ChildComponent {
   @Output() eventtrigger: EventEmitter<any> = new EventEmitter<any>();
 
   eventfunction(){
+    this.MsgfromChild = "Hello from Child Component!";
     this.eventtrigger.emit(this.MsgfromChild);
-    console.log(this.MsgfromChild);
+    
   }
 
 

@@ -17,6 +17,10 @@ import { TemplateformsComponent } from "./templateforms/templateforms.component"
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { APIWorksComponent } from './api-works/api-works.component';
 import { AuthenNAuthorComponent } from './authen-n-author/authen-n-author.component';
+import { MatTableComponent } from './mat-table/mat-table.component';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogboxComponent } from './dialogbox/dialogbox.component';
+import { LearningRxjsComponent } from "./learning-rxjs/learning-rxjs.component";
 
 
 
@@ -29,31 +33,34 @@ import { AuthenNAuthorComponent } from './authen-n-author/authen-n-author.compon
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     imports: [
-      APIWorksComponent,
-        FormsModule,
-        RouterLink,
-        BgcolorDirective,
-        HttpClientModule,
-        RouterLinkActive,
-        HostListenerComponent,
-        // LazyLoadingComponent,
-        RouterOutlet,
-        ChildComponent,
-        TemplateReferenceVariableComponent,
-        SetBackgroundDirective,
-        ViewChildComponent,
-        NgContentComponent,
-        ContentChildComponent,
-        CommonModule,
-        Component2Component,
-        Component1Component,
-        TemplateformsComponent,
-        AuthenNAuthorComponent
-    ]
+    APIWorksComponent,
+    MatTableComponent,
+    FormsModule,
+    RouterLink,
+    BgcolorDirective,
+    HttpClientModule,
+    RouterLinkActive,
+    HostListenerComponent,
+    // LazyLoadingComponent,
+    RouterOutlet,
+    ChildComponent,
+    TemplateReferenceVariableComponent,
+    SetBackgroundDirective,
+    ViewChildComponent,
+    NgContentComponent,
+    ContentChildComponent,
+    CommonModule,
+    Component2Component,
+    Component1Component,
+    TemplateformsComponent,
+    AuthenNAuthorComponent,
+    DialogboxComponent,
+    LearningRxjsComponent
+]
 })
 export class AppComponent implements OnInit {
 
-  constructor(){
+  constructor(private dialog : MatDialog){
     
 
   }
@@ -75,6 +82,12 @@ export class AppComponent implements OnInit {
     console.log("data got from ");
   }
 
+  opendialog(){
+    this.dialog.open(DialogboxComponent, {
+      width:'50%',
+      height: '400px'
+    })
+  }
  
 
 }

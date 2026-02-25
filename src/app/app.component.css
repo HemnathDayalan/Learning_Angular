@@ -22,4 +22,5 @@
     display: flex; /* Use flexbox for centering child elements */
     justify-content: center; /* Center child elements horizontally */
     align-items: center; /* Center child elements vertically */
+    
 }
